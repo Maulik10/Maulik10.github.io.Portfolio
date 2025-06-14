@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maulik - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <button id="darkModeToggle">Toggle Dark Mode</button>
+  <button id="darkModeToggle">🌙</button>
 
   <nav>
     <div class="nav-brand">Maulik</div>
     <div class="nav-links">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -20,47 +22,54 @@
     </div>
   </nav>
 
-  <header>
-    <p>Welcome to my personal portfolio website!</p>
-  </header>
+  <header id="home">
+  <div class="hero-container" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Hi, I'm Maulik 👋</h1>
+      <p>I am a <span class="typing-text"></span></p>
+      <a class="cta" href="#projects">View My Work</a>
+    </div>
+  </div>
+</header>
 
-  <section id="about">
+
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Hello! I am <strong>Maulik</strong>, a B.Tech Computer Science student, with a strong passion for web and app development. I love building responsive and user-friendly digital experiences. Whether it's creating elegant websites or functional mobile apps, I enjoy the entire development process — from design to deployment. I’m constantly learning new technologies and strive to turn ideas into impactful solutions.</p>
+    <p>Hello! I am <strong>Maulik</strong>, a Computer Science student with a passion for building responsive websites and smart digital solutions. I enjoy full-stack development and exploring AI for real-world applications.</p>
   </section>
 
-  <section id="skills">
+  <section id="skills" data-aos="fade-right">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>Python</li>
-    </ul>
+    <div class="skill-badges">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+    </div>
 
     <h2>Interests</h2>
-    <ol>
-      <li>Web Development</li>
-      <li>Artificial Intelligence</li>
-      <li>Problem Solving</li>
-    </ol>
+    <ul class="interests">
+      <li>💻 Web Development</li>
+      <li>🤖 Artificial Intelligence</li>
+      <li>🧠 Problem Solving</li>
+    </ul>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-left">
     <h2>Projects</h2>
-
-    <div>
-      <h3>Number Guessing Game</h3>
-      <p>An interactive browser-based game where users guess a random number.</p>
-      <a href="https://github.com/Maulik10/Maulik-web-app-comp" target="_blank">View Project</a>
+    <div class="project-card">
+      <h3>🎯 Number Guessing Game</h3>
+      <p>An interactive browser game where users guess a random number with difficulty levels.</p>
+      <a href="https://github.com/Maulik10/Maulik-web-app-comp" target="_blank">🔗 View on GitHub</a>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Information</h2>
+  <section id="contact" data-aos="zoom-in-up">
+    <h2>Contact Me</h2>
     <p>Email: <a href="mailto:maulikguliani45@gmail.com">maulikguliani45@gmail.com</a></p>
-    <p>Phone: <a href="tel:+918851079171">+91 8851079171</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/maulik-9b0885255/">Maulik</a></p>
-    <p>GitHub: <a href="https://github.com/Maulik10">Maulik10</a></p>
+    <p>Phone: <a href="tel:+918851079171">+91 88510 79171</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/maulik-9b0885255/">@Maulik</a></p>
+    <p>GitHub: <a href="https://github.com/Maulik10">@Maulik10</a></p>
   </section>
 
   <footer>
@@ -68,5 +77,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    var typed = new Typed('.typing-text', {
+      strings: ['Web Developer', 'Tech Enthusiast', 'AI Learner'],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
 </body>
 </html>
