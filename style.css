@@ -60,7 +60,75 @@ nav {
   }
 }
 
-/* Content sections */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f2f5, #e3e6ec);
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: background 0.4s;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .cta {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero-content .cta:hover {
+  background-color: #2980b9;
+}
+.hero-container {
+  background: linear-gradient(120deg, #e0f7fa, #f8f9fa, #e8eaf6);
+}
+
+/* Dark mode adaptation */
+body.dark-mode .hero-container {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .hero-content h1 {
+  color: #ffffff;
+}
+
+body.dark-mode .hero-content p {
+  color: #cccccc;
+}
+
+body.dark-mode .hero-content .cta {
+  background-color: #00c896;
+}
+
+body.dark-mode .hero-content .cta:hover {
+  background-color: #00a87a;
+}
+body.dark-mode .hero-container {
+  background: linear-gradient(120deg, #1a1a1a, #212121, #2c2c2c);
+}
+
+
+/* Sections */
 header, section, footer {
   padding: 20px;
   margin: 20px;
@@ -83,6 +151,42 @@ a {
 }
 
 a:hover {
+  text-decoration: underline;
+}
+
+/* Skills */
+.skill-badges span {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 0.9em;
+}
+
+.interests li {
+  margin: 8px 0;
+  list-style: none;
+}
+
+/* Projects */
+.project-card {
+  background: #fafafa;
+  padding: 20px;
+  margin: 10px 0;
+  border-left: 5px solid #3498db;
+  border-radius: 8px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #2980b9;
+}
+
+.project-card a:hover {
   text-decoration: underline;
 }
 
@@ -119,7 +223,6 @@ body.dark-mode .nav-links a:hover {
   color: #00ffb3;
 }
 
-/* Dark Mode Toggle Button */
 #darkModeToggle {
   position: fixed;
   bottom: 20px;
@@ -136,5 +239,23 @@ body.dark-mode .nav-links a:hover {
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
-  color: #76869e; 
+  color: #76869e;
+}
+
+.typing-text {
+  color: #f1c40f;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
